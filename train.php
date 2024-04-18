@@ -1,9 +1,10 @@
 <?php
 require 'Trainer.php';
-$ann = fann_create_standard_array(3,array(10000, 500, 2));
-for($r = 0; $r < 100; $r++){
+$ann = fann_create_standard_array(3,array(10000, 450, 2));
+fann_set_learning_rate($ann, 0.3);
+for($r = 0; $r < 200; $r++){
     echo "epocha $r".PHP_EOL;
-    for($i = 0; $i < 50; $i++)
+    for($i = 0; $i < 100; $i++)
     {
 
         fann_train($ann,
