@@ -11,7 +11,7 @@ class Trainer
         $image = imagecreatetruecolor(100, 100);
 
         // Копируем исходное изображение в новое, масштабируя и интерполируя пиксели
-        imagecopyresampled($image, $sourceImage, 0, 0, 0, 0, 50, 50, $sourceWidth, $sourceHeight);
+        imagecopyresampled($image, $sourceImage, 0, 0, 0, 0, 100, 100, $sourceWidth, $sourceHeight);
 
         if ($image === false) {
             echo "Не удалось загрузить изображение";
